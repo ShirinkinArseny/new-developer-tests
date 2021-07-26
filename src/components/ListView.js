@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "./Button";
@@ -30,6 +30,7 @@ const useStyles = makeStyles(() => ({
 
 export const ListView = () => {
   const classes = useStyles();
+  const [users, setUsers] = useState([])
 
   const getUsers = () => {
     //Timeout to simulate a slow connection or a heavy request
