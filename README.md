@@ -21,7 +21,7 @@ Before you begin, watch this video demonstration of how completed application sh
 &nbsp;
 # Your tasks:
 
-###BASE LEVEL:
+**BASE LEVEL:**
 
 - Launch the app
 
@@ -36,7 +36,7 @@ Before you begin, watch this video demonstration of how completed application sh
   - Implement `Increment by 1` button. It should increment counter by 1 and properly display it
   - Add/modify needed CSS classes to add a spacing between buttons
 
-###ADVANCED LEVEL
+**ADVANCED LEVEL**
 
 - On `API` page:  &nbsp;&nbsp;
   - Display a loader (`/src/components/Loader.js`) while app is fetching users
