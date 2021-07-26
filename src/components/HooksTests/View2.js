@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "../Button";
+import { Button } from "../Controls/Button";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({

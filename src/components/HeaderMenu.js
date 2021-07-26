@@ -35,6 +35,10 @@ const options = [
     title: "React-Advanced",
     url: "/react_2",
   },
+  {
+    title: "JS",
+    url: "/js",
+  },
 ];
 
 export const HeaderMenu = () => {

@@ -6,6 +6,7 @@ import logo from "./assets/images/Flowster-Logo-Main.svg";
 import { ListView } from "./components/ListView";
 import { View1 } from "./components/HooksTests/View1";
 import { View2 } from "./components/HooksTests/View2";
+import {JsTest} from "./components/JsTest";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -47,6 +48,7 @@ function App() {
           <Route exact path="/api" component={ListView} />
           <Route exact path="/react_1" component={View1} />
           <Route exact path="/react_2" component={View2} />
+          <Route exact path="/js" component={JsTest} />
           <Redirect to={"/api"} />
         </Switch>
       </div>

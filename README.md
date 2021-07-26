@@ -9,8 +9,10 @@ You're free to use Google or anything, but remember about the time limit of 3 ho
 
 **ATTENTION:**
 
-Before you begin, watch this video demonstration of how completed application should work like:
+Before you begin, watch this video demonstration of how completed application should look like:
 [Demonstration](https://youtu.be/NSKhZd-RG0s)
+
+*&nbsp; Video doesn't contain `JS` part 
 
 # Goals / Outcomes
 - Using state 
@@ -36,6 +38,11 @@ Before you begin, watch this video demonstration of how completed application sh
   - Implement `Increment by 1` button. It should increment counter by 1 and properly display it
   - Add/modify needed CSS classes to add a spacing between buttons
 
+
+- On `JS` page:
+  - Implement a function which checks an array of booleans and returns `true` if array contains both `false` and `true` values,
+    and returns `false` if array contains only `false` or only `true`
+
 **ADVANCED LEVEL**
 
 - On `API` page:  &nbsp;&nbsp;
@@ -56,6 +63,13 @@ Before you begin, watch this video demonstration of how completed application sh
     **Tip:** you should prevent recalculating slowCounter rendered value for certain cases
 
     **Tip:** This part will require more code changes than all the above
+
+
+- On `JS` page:
+  - Implement a function which checks an array of booleans and returns `true` if array contains both `false` and `true` values,
+    and returns `false` if array contains only `false` or only `true`
+    
+    **Additional condition:** Function shouldn't create any variables, *including* cycle iterators
 
 
 - Alerts. You'll find a special React Context in `/src/contexts/AlertContext.js`
