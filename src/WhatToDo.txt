@@ -1,0 +1,1 @@
+1. Append fetch function to display loader and display users after loaded
