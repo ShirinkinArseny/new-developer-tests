@@ -16,6 +16,13 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    //gap: 10px would be enough, but safari cant into flex-gap
+    "& *": {
+      marginRight: "10px",
+      "&:last-child": {
+        marginRight: "0"
+      }
+    }
   },
 }));
 
@@ -24,13 +31,13 @@ export const View1 = () => {
   const [counter, setCounter] = useState(0);
 
   const incrementBy1 = () => {
-    //do something
+    setCounter((prev) => prev + 1);
   };
 
   const incrementBy1000 = () => {
-    //ATTENTION! Don't remove "for" cycle. That's the idea of this task
     for (let i = 0; i < 1000; i++) {
-      //increment counter by 1 here
+      //should incrementBy1 be implemented in the way that screws up this?
+      incrementBy1()
     }
   };
 

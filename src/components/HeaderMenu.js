@@ -13,6 +13,7 @@ const useStyles = makeStyles(() => ({
     cursor: "pointer",
     marginRight: 15,
     color: "#000",
+    fontFamily: "sans-serif",
     "&:hover": {
       opacity: 0.7,
     },

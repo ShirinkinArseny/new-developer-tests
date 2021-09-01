@@ -28,11 +28,11 @@ export const View2 = () => {
   const [fastCounter, setFastCounter] = useState(0);
 
   const slowIncrement = () => {
-    //copy increment code from view1
+
   };
 
   const fastIncrement = () => {
-    //copy increment code from view1
+
   };
 
   const calculate = () => {
