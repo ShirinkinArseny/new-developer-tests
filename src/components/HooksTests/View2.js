@@ -36,10 +36,21 @@ export const View2 = () => {
     };
 
     const calculatedValue = useMemo(() => {
+            let blackhole = 0;
+            /*
+            This loop can potentially be dead-code-eliminated,
+            because 'i' is never used.
+            Blackhole is used to fool the optimiser and
+            to make slowpath REALLY be slow.
+
+            Average time per call, ms
+            Without blackhole:    220
+            With    blackhole:   2100
+             */
             for (let i = 0; i < 1000000000; i++) {
-                //do something
+                blackhole += i;
             }
-            return slowCounter;
+            return slowCounter + " bh=" + blackhole;
         },
         [slowCounter]
     );

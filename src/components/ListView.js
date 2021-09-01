@@ -4,6 +4,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import {Button} from "./Controls/Button";
 import UserPreviewLine from "./UserPreviewLine";
 import {Loader} from "./Loader";
+import {AlertProvider, useAlert} from "../contexts/AlertContext";
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -39,6 +40,7 @@ export const ListView = () => {
     const classes = useStyles();
     const [isLoaded, setLoaded] = useState(false)
     const [users, setUsers] = useState([])
+    const alert = useAlert()
 
     const getUsers = () => {
         setTimeout(() => {
@@ -60,18 +62,19 @@ export const ListView = () => {
             prev
                 .slice()
                 .sort((a, b) =>
-                    criterion(a).localeCompare(criterion(b))
+                    criterion.extractor(a).localeCompare(criterion.extractor(b))
                 )
         );
+        alert.show("Sorted by "+criterion.title);
     }
 
-    const handleNameSort = () => {
-        sortBy(u => u.name);
-    };
+    const createSorter = (criterion) => () => sortBy(criterion)
 
-    const handleEmailSort = () => {
-        sortBy(u => u.email);
-    };
+    const nameCriterion = { title: "name", extractor: u => u.name };
+    const handleNameSort = createSorter(nameCriterion);
+
+    const emailCriterion = { title: "email", extractor: u => u.email };
+    const handleEmailSort = createSorter(emailCriterion);
 
     const content = isLoaded
         ?

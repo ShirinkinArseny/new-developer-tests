@@ -18,6 +18,7 @@ const useStyles = makeStyles(() => ({
     borderRadius: 3,
     zIndex: 1000,
     transition: "all .3s",
+    fontFamily: "sans-serif",
   },
   hidden: {
     opacity: 0,
